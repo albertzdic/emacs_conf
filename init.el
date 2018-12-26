@@ -85,6 +85,9 @@
 (desktop-save-mode 1)
 (setq european-calendar-style 't)
 
+(require 'evil)
+  (evil-mode 1)
+
 ;; function-args
 ;; (require 'function-args)
 ;; (fa-config-default)
