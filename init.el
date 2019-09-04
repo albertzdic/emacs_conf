@@ -87,6 +87,12 @@
 
 (require 'evil)
   (evil-mode 1)
+  
+;;org-mobile file per webdav nextcloud
+;; Set to the location of your Org files on your local system
+(setq org-directory "~/org")
+;; Set to the name of the file where new notes will be stored
+(setq org-mobile-inbox-for-pull "~/org/flagged.org")
 
 ;; function-args
 ;; (require 'function-args)
@@ -100,12 +106,23 @@
  ;; If there is more than one, they won't work right.
  '(coffee-tab-width 2)
  '(custom-enabled-themes nil)
- '(org-agenda-files (quote ("~/programmazione_c/organizzazione/begin.org")))
+ '(global-visual-line-mode t)
+ '(linum-relative-current-symbol "")
+ '(org-agenda-files
+   (quote
+    ("~/Nextcloud/org/mobileorg.org" "~/Nextcloud/org/note.org" "~/Nextcloud/org/index.org" "~/Nextcloud/org/appuntamenti.org")))
+ '(org-directory "~/Nextcloud/org/")
+ '(org-mobile-agendas (quote default))
+ '(org-mobile-directory "/home/albertzdic/Nextcloud/org/")
+ '(org-mobile-inbox-for-pull "~/Nextcloud/org/flagged.org" t)
+ '(org-refile-allow-creating-parent-nodes (quote confirm))
+ '(org-refile-targets (quote ((org-agenda-files :level . 1))))
  '(package-selected-packages
    (quote
-    (helm-descbinds company-c-headers function-args use-package elpy auctex clojure-project-mode typed-clojure-mode cider-decompile cider tagedit smex rainbow-delimiters queue projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking)))
+    (lua-mode linum-relative evil helm-descbinds company-c-headers function-args use-package elpy auctex clojure-project-mode typed-clojure-mode cider-decompile cider tagedit smex rainbow-delimiters queue projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking)))
  '(python-shell-font-lock-enable t)
- '(pyvenv-mode nil))
+ '(pyvenv-mode nil)
+ '(visual-line-fringe-indicators (quote (left-curly-arrow right-curly-arrow))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
